@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ScheduleViewer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_calandar_view">CalandarView</string>
+    <string name="title_activity_calendar_grid_view">CalendarGridView</string>
+    <string name="paste_schedule">Paste Schedule</string>
+    <string name="paste_instruction">Copy Your Entire Schedule Calendar Text, Then Click The Paste Schedule Button to Paste Your Schedule Text Here...</string>
+    <string name="convert_to_calendar">Go To Calendar</string>
+
+</resources>

@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".ScheduleLoader"
+    android:id="@+id/layout">
+
+    <GridLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp">
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:text="@string/paste_schedule"
+                android:id="@+id/pasteButton"
+                android:layout_gravity="center_horizontal"
+                android:onClick="pasteButtonClick" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="165dp"
+                android:text="@string/paste_instruction"
+                android:id="@+id/rawScheduleText"
+                android:autoText="true"
+                android:nestedScrollingEnabled="true"
+                android:textColor="@android:color/holo_orange_dark"
+                android:background="@drawable/paster_outer_frame"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:   "
+                android:id="@+id/textView2"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nameText"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Year:     "
+                android:id="@+id/textView"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/yearText"
+                android:textSize="12sp"
+                android:layout_weight="0.08"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule Month:  "
+                android:id="@+id/textView3"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/monthPicker"
+                android:spinnerMode="dialog"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.60" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="@string/convert_to_calendar"
+            android:id="@+id/convertButton"
+            android:layout_gravity="center_horizontal"
+            android:onClick="okayButtonClick"
+            android:layout_row="11"
+            android:layout_column="0" />
+
+    </GridLayout>
+
+</RelativeLayout>
